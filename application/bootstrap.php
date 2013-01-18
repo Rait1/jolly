@@ -90,7 +90,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/kohana/',
+	'base_url'   => '/jolly/',
 ));
 
 /**
@@ -107,13 +107,13 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
+	'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
+	'database'   => MODPATH.'database',   // Database access
 	// 'image'      => MODPATH.'image',      // Image manipulation
 	// 'minion'     => MODPATH.'minion',     // CLI Tasks
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+	'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	));
@@ -127,3 +127,4 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
 		'controller' => 'welcome',
 		'action'     => 'index',
 	));
+Cookie::$salt = "cl9sIsMAEjOpn2krxBo4E73BY72DHAKt";
