@@ -124,7 +124,7 @@ Kohana::modules(array(
  */
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'welcome',
+		'controller' => 'Dash',
 		'action'     => 'index',
 	));
 Cookie::$salt = "cl9sIsMAEjOpn2krxBo4E73BY72DHAKt";
