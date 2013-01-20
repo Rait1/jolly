@@ -39,19 +39,31 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            <!--/.uus osa -->
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="<?=URL::base()?>login">Login</a>
+                </li>
+            </ul>
+
+            </div>
+        <!--/.TODO: add logout link, hide one of the links depending on user authentication status, implement logout.-->
+
+           <!--/.uus osa -->
             <!--/.nav-collapse -->
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class=" container">
 
-    <?=$content?>
+                    <?=$content?>
 
-</div>
-<!-- /container -->
+        </div>
+        <!-- /container -->
 
-<?=Notify::render()?> <!-- -->
+        <?=Notify::render()?> <!-- -->
 </body>
 </html>
 
