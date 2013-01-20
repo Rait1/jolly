@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Symfony\\Component\\Yaml' => $vendorDir . '/symfony/yaml/',
+    'Composer\\Installers\\' => $vendorDir . '/composer/installers/src/',
 );
