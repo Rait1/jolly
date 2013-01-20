@@ -120,7 +120,7 @@ class Kohana_ORM_Validation_Exception extends Kohana_Exception {
 	/**
 	 * Returns a merged array of the errors from all the Validation objects in this exception
 	 *
-	 *     // Will load Model_User errors from messages/orm-validation/user.php
+	 *     // Will load Model_User errors from messages/orm-validation/User.php
 	 *     $e->errors('orm-validation');
 	 *
 	 * @param   string  $directory Directory to load error messages from

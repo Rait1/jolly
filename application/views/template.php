@@ -51,7 +51,7 @@
 </div>
 <!-- /container -->
 
-
+<?=Notify::render()?> <!-- -->
 </body>
 </html>
 
