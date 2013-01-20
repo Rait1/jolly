@@ -1,0 +1,1 @@
+<h1>I am the index view</h1>
