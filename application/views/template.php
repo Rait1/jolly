@@ -42,26 +42,30 @@
             <!--/.uus osa -->
 
             <ul class="nav">
+                <? if (!Auth::instance()->logged_in()) { ?>
                 <li class="active">
-                    <a href="<?=URL::base()?>login">Login</a>
+                <a href="<?=URL::base()?>login">Login</a>
+                <? } else { ?>
+                <li class="active">
+                <li><a href="<?=URL::base()?>login/logout">Logout</a></li>
+                <? } ?>
                 </li>
             </ul>
-
-            </div>
+        </div>
         <!--/.TODO: add logout link, hide one of the links depending on user authentication status, implement logout.-->
 
-           <!--/.uus osa -->
-            <!--/.nav-collapse -->
-        </div>
+        <!--/.uus osa -->
+        <!--/.nav-collapse -->
     </div>
+</div>
 </div>
 
 <div class=" container">
 
-                    <?=$content?>
+    <?=$content?>
 
-        </div>
-        <!-- /container -->
+</div>
+<!-- /container -->
 
 <?=Notify::render()?>
 </body>
