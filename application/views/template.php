@@ -63,7 +63,7 @@
         </div>
         <!-- /container -->
 
-        <?=Notify::render()?> <!-- -->
+<?=Notify::render()?>
 </body>
 </html>
 
