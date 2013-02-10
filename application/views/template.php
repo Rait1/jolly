@@ -24,12 +24,6 @@
 
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-
             <ul class="nav">
                 <? if (!Auth::instance()->logged_in()) { ?>
                 <li class="inactive">
@@ -40,18 +34,13 @@
                 <? } ?>
                 </li>
             </ul>
-        </div>
-        <?=Notify::render()?>
-        <!--/.TODO: add logout link, hide one of the links depending on user authentication status, implement logout.-->
-
-        <!--/.uus osa -->
         <!--/.nav-collapse -->
     </div>
 </div>
-</div>
 
-<div class=" container">
+<div class="container">
     <?=Notify::render()?>
+    <?=$content?>
 </div>
 <!-- /container -->
 
