@@ -2,11 +2,11 @@
 
 return array(
 	'default_message_type'	=> 'default',
-	'view'					=> 'notify/bootstrap',
+	'view'					=> 'notify/jqueryui',
 	
 	// By default, should notify always create 
 	// persistent messages (via session)?
-	'persistent_messages'	=> TRUE,
+	'persistent_messages'	=> FALSE,
 
 	// Should all added messages be automatically
 	// run through the i18n __ function?

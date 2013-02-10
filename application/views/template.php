@@ -29,29 +29,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="#">Jolly</a>
-
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <!--/.uus osa -->
 
             <ul class="nav">
                 <? if (!Auth::instance()->logged_in()) { ?>
-                <li class="active">
-                <a href="<?=URL::base()?>login">Login</a>
+                <li class="inactive">
+                <a href="<?=URL::base()?>login">Sisselogimine</a>
                 <? } else { ?>
-                <li class="active">
-                <li><a href="<?=URL::base()?>login/logout">Logout</a></li>
+                <li class="inactive">
+                <li><a href="<?=URL::base()?>login/logout">Logi välja</a></li>
                 <? } ?>
                 </li>
             </ul>
         </div>
+        <?=Notify::render()?>
         <!--/.TODO: add logout link, hide one of the links depending on user authentication status, implement logout.-->
 
         <!--/.uus osa -->
@@ -61,13 +51,11 @@
 </div>
 
 <div class=" container">
-
-    <?=$content?>
-
+    <?=Notify::render()?>
 </div>
 <!-- /container -->
 
-<?=Notify::render()?>
+
 </body>
 </html>
 

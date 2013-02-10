@@ -1,0 +1,26 @@
+{
+	"name"       :"anroots/notify",
+	"type"       :"kohana-module",
+	"description":"A simple Kohana 3 module designed to capture messages from different methods and modules to be displayed later with a unified look and feel.",
+	"keywords"   :["kohana", "flash message", "messaging", "notify"],
+	"homepage"   :"https://github.com/anroots/Notify",
+	"license"    :"MIT",
+	"authors"    :[
+		{
+			"name"    :"Ricardo de Luna",
+			"email"   :"kaltar@kaltar.org",
+			"homepage":"http://kaltar.org",
+			"role"    :"Developer"
+		},
+		{
+			"name"    :"Ando Roots",
+			"email"   :"ando@sqroot.eu",
+			"homepage":"http://sqroot.eu",
+			"role"    :"Developer"
+		}
+	],
+	"require"    :{
+		"php"                :">=5.4.0",
+		"composer/installers":"*"
+	}
+}

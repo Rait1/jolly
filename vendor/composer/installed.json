@@ -1,47 +1,110 @@
 [
     {
-        "name": "phpunit/php-timer",
-        "version": "1.0.4",
-        "version_normalized": "1.0.4.0",
+        "name": "composer/installers",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
-            "url": "git://github.com/sebastianbergmann/php-timer.git",
-            "reference": "1.0.4"
+            "url": "https://github.com/composer/installers",
+            "reference": "v1.0.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://github.com/sebastianbergmann/php-timer/zipball/1.0.4",
-            "reference": "1.0.4",
+            "url": "https://github.com/composer/installers/zipball/v1.0.0",
+            "reference": "v1.0.0",
             "shasum": ""
         },
-        "require": {
-            "php": ">=5.3.3"
+        "replace": {
+            "shama/baton": "*"
         },
-        "time": "2012-10-11 04:45:58",
-        "type": "library",
+        "require-dev": {
+            "composer/composer": "1.0.*@dev"
+        },
+        "time": "2012-09-07 21:17:33",
+        "type": "composer-installer",
+        "extra": {
+            "class": "Composer\\Installers\\Installer"
+        },
         "installation-source": "dist",
         "autoload": {
-            "classmap": [
-                "PHP/"
-            ]
+            "psr-0": {
+                "Composer\\Installers\\": "src/"
+            }
         },
-        "include-path": [
-            ""
-        ],
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "BSD-3-Clause"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Sebastian Bergmann",
-                "email": "sb@sebastian-bergmann.de",
-                "role": "lead"
+                "name": "Kyle Robinson Young",
+                "email": "kyle@dontkry.com",
+                "homepage": "https://github.com/shama",
+                "role": "Developer"
             }
         ],
-        "description": "Utility class for timing",
-        "homepage": "http://www.phpunit.de/",
+        "description": "A multi-framework Composer library installer",
+        "homepage": "http://composer.github.com/installers/",
         "keywords": [
-            "timer"
+            "symfony",
+            "installer",
+            "zend",
+            "wordpress",
+            "cakephp",
+            "codeigniter",
+            "fuelphp",
+            "drupal",
+            "lithium",
+            "li3",
+            "joomla",
+            "laravel",
+            "phpbb",
+            "ppi",
+            "silverstripe",
+            "kohana",
+            "mako"
+        ]
+    },
+    {
+        "name": "fp/lightopenid",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/formapro/LightOpenID",
+            "reference": "ad14146f9c93e90699888e150427aca431dc3c18"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/formapro/LightOpenID/archive/ad14146f9c93e90699888e150427aca431dc3c18.zip",
+            "reference": "ad14146f9c93e90699888e150427aca431dc3c18",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2"
+        },
+        "time": "2012-04-04 08:39:51",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "openid.php",
+                "provider/provider.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "Mewp",
+                "email": "mewp151+gitorious.org@gmail.com"
+            }
+        ],
+        "description": "A PHP 5 library for easy openid authentication",
+        "homepage": "https://github.com/formapro/LightOpenID",
+        "keywords": [
+            "security",
+            "OpenId",
+            "Authentication"
         ]
     },
     {
@@ -88,52 +151,6 @@
         "homepage": "http://www.phpunit.de/",
         "keywords": [
             "tokenizer"
-        ]
-    },
-    {
-        "name": "phpunit/php-file-iterator",
-        "version": "1.3.3",
-        "version_normalized": "1.3.3.0",
-        "source": {
-            "type": "git",
-            "url": "git://github.com/sebastianbergmann/php-file-iterator.git",
-            "reference": "1.3.3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/sebastianbergmann/php-file-iterator/zipball/1.3.3",
-            "reference": "1.3.3",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "time": "2012-10-11 04:44:38",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "File/"
-            ]
-        },
-        "include-path": [
-            ""
-        ],
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Sebastian Bergmann",
-                "email": "sb@sebastian-bergmann.de",
-                "role": "lead"
-            }
-        ],
-        "description": "FilterIterator implementation that filters files based on a list of suffixes.",
-        "homepage": "http://www.phpunit.de/",
-        "keywords": [
-            "filesystem",
-            "iterator"
         ]
     },
     {
@@ -278,6 +295,97 @@
         ]
     },
     {
+        "name": "phpunit/php-timer",
+        "version": "1.0.4",
+        "version_normalized": "1.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/sebastianbergmann/php-timer.git",
+            "reference": "1.0.4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/sebastianbergmann/php-timer/zipball/1.0.4",
+            "reference": "1.0.4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2012-10-11 04:45:58",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "PHP/"
+            ]
+        },
+        "include-path": [
+            ""
+        ],
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sb@sebastian-bergmann.de",
+                "role": "lead"
+            }
+        ],
+        "description": "Utility class for timing",
+        "homepage": "http://www.phpunit.de/",
+        "keywords": [
+            "timer"
+        ]
+    },
+    {
+        "name": "phpunit/php-file-iterator",
+        "version": "1.3.3",
+        "version_normalized": "1.3.3.0",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/sebastianbergmann/php-file-iterator.git",
+            "reference": "1.3.3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/sebastianbergmann/php-file-iterator/zipball/1.3.3",
+            "reference": "1.3.3",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "time": "2012-10-11 04:44:38",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "File/"
+            ]
+        },
+        "include-path": [
+            ""
+        ],
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Bergmann",
+                "email": "sb@sebastian-bergmann.de",
+                "role": "lead"
+            }
+        ],
+        "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+        "homepage": "http://www.phpunit.de/",
+        "keywords": [
+            "filesystem",
+            "iterator"
+        ]
+    },
+    {
         "name": "phpunit/php-code-coverage",
         "version": "1.2.7",
         "version_normalized": "1.2.7.0",
@@ -403,114 +511,6 @@
             "testing",
             "phpunit",
             "xunit"
-        ]
-    },
-    {
-        "name": "fp/lightopenid",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/formapro/LightOpenID",
-            "reference": "ad14146f9c93e90699888e150427aca431dc3c18"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/formapro/LightOpenID/archive/ad14146f9c93e90699888e150427aca431dc3c18.zip",
-            "reference": "ad14146f9c93e90699888e150427aca431dc3c18",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.2"
-        },
-        "time": "2012-04-04 08:39:51",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "classmap": [
-                "openid.php",
-                "provider/provider.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "authors": [
-            {
-                "name": "Mewp",
-                "email": "mewp151+gitorious.org@gmail.com"
-            }
-        ],
-        "description": "A PHP 5 library for easy openid authentication",
-        "homepage": "https://github.com/formapro/LightOpenID",
-        "keywords": [
-            "security",
-            "OpenId",
-            "Authentication"
-        ]
-    },
-    {
-        "name": "composer/installers",
-        "version": "v1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/composer/installers",
-            "reference": "v1.0.0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/composer/installers/zipball/v1.0.0",
-            "reference": "v1.0.0",
-            "shasum": ""
-        },
-        "replace": {
-            "shama/baton": "*"
-        },
-        "require-dev": {
-            "composer/composer": "1.0.*@dev"
-        },
-        "time": "2012-09-07 21:17:33",
-        "type": "composer-installer",
-        "extra": {
-            "class": "Composer\\Installers\\Installer"
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Composer\\Installers\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Kyle Robinson Young",
-                "email": "kyle@dontkry.com",
-                "homepage": "https://github.com/shama",
-                "role": "Developer"
-            }
-        ],
-        "description": "A multi-framework Composer library installer",
-        "homepage": "http://composer.github.com/installers/",
-        "keywords": [
-            "symfony",
-            "installer",
-            "zend",
-            "wordpress",
-            "cakephp",
-            "codeigniter",
-            "fuelphp",
-            "drupal",
-            "lithium",
-            "li3",
-            "joomla",
-            "laravel",
-            "phpbb",
-            "ppi",
-            "silverstripe",
-            "kohana",
-            "mako"
         ]
     },
     {

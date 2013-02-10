@@ -76,6 +76,7 @@ class Controller_Login extends Controller_Template
      */
     public function action_finish()
     {
+
         if ($this->_openid->mode == 'cancel') { // Auth was cancelled
             Notify::error('User pressed the "cancel" button! Can not log in.');
         } elseif ($this->_openid->validate()) { // Auth success
@@ -129,9 +130,10 @@ class Controller_Login extends Controller_Template
 
         return $user;
     }
-
-    public function action_logout(){
+    public function action_logout()
+    {
         Auth::instance()->logout();
-        $this->redirect(URL::base());
+        Notify::success('You have successfully logged out!');
+        $this->redirect('');
     }
 }
